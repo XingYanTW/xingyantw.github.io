@@ -14,18 +14,27 @@ tags: [minecraft, plugin, java, core, rpg]
 
 ### 自訂生物
 實作了一套系統，用於建立和管理具有獨特屬性和行為的自訂生物。
+
+~~對 他有兩行~~
 ![Image]({{ site.baseurl }}/assets/images/CoreProject/螢幕擷取畫面 2026-01-02 214307.png)
 
 ### 自訂物品
 包含自訂物品和武器的框架，允許建立具有特殊屬性和稀有度的裝備。
+
+~~這個物品想法不來自我 AI太好用了你們知道嗎~~
 ![Image]({{ site.baseurl }}/assets/images/CoreProject/螢幕擷取畫面 2026-01-02 214404.png)
 
 ### GUI 系統
 提供基於物品欄的 GUI 系統，以促進使用者與各種插件功能的互動，例如選單和數據顯示。
+
+~~很空 可能未來會有自訂樣式之類的出現~~
 ![Image]({{ site.baseurl }}/assets/images/CoreProject/螢幕擷取畫面 2026-01-02 214415.png)
 
 ### 玩家數據
 追蹤並管理自訂玩家數據，包括生命值、魔力、耐力和經驗值，這些數據獨立於原版 Minecraft 機制。
+
+~~好我承認這數值有點過於誇張了~~
+
 ![Image]({{ site.baseurl }}/assets/images/CoreProject/螢幕擷取畫面 2026-01-02 214657.png)
 
 ### 獨特的攻擊系統
@@ -37,6 +46,7 @@ tags: [minecraft, plugin, java, core, rpg]
     <source src="{{ site.baseurl }}/assets/videos/Base Profile 2026.01.02 - 21.48.45.01.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
+⚠️音效注意！
 
 ### 資源包整合 (W.I.P)
 包含資源包結構，以支援插件功能所需的自訂材質和字型。
