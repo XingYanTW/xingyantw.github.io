@@ -308,10 +308,14 @@
  */
 .site-footer {
     border-top: 1px solid var(--border-color, $grey-color-light);
-    padding: $spacing-unit 0;
+    padding: $spacing-unit * 0.5 0;
     background-color: var(--bg-color-secondary, #fdfdfd);
     color: var(--text-color, $text-color);
     margin-top: auto;
+
+    @include media-query($on-palm) {
+        padding-bottom: $spacing-unit * 0.25;
+    }
 }
 
 .footer-content {
@@ -319,16 +323,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit * 0.5;
     gap: $spacing-unit;
 
     @include media-query($on-palm) {
         flex-direction: column;
+        gap: $spacing-unit * 0.5;
     }
 }
 
 .footer-branding {
-    flex: 1 1 300px;
 
     .footer-heading {
         @include relative-font-size(1.25);
@@ -340,6 +344,11 @@
     .footer-description {
         @include relative-font-size(0.95);
         color: var(--text-color-secondary, $grey-color);
+    }
+
+    @include media-query($on-palm) {
+        //flex: 1 1 300px;
+        margin-bottom: $spacing-unit * 0.5;
     }
 }
 
@@ -383,7 +392,7 @@
 
 .footer-bottom {
     border-top: 1px solid var(--border-color, $grey-color-light);
-    padding-top: $spacing-unit * 0.5;
+    padding-top: $spacing-unit * 0.25;
     text-align: center;
     @include relative-font-size(0.875);
     color: var(--text-color-secondary, $grey-color);

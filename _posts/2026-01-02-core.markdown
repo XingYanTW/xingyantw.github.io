@@ -43,7 +43,7 @@ tags: [minecraft, plugin, java, core, rpg]
 *   **AOE 範圍攻擊**: 支援將普通攻擊轉化為範圍傷害 (AOE)，能夠同時對攻擊路徑或目標周圍的多個敵人造成傷害。
 
 <video controls width="600">
-    <source src="{{ site.baseurl }}/assets/videos/Base Profile 2026.01.02 - 21.48.45.01.mp4" type="video/mp4">
+    <source src="{{ site.baseurl }}/assets/videos/CoreVideo1.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 ⚠️音效注意！
