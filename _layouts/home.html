@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="home">
+  <div class="hero-section">
+    <h1 class="page-heading">{{ site.title }}</h1>
+    <p class="site-description">{{ site.description }}</p>
+  </div>
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Latest Posts" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts limit:2 -%}
+      <li class="post-card">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <div class="post-card-header">
+          <span class="post-meta">{{ post.date | date: "%Y年%-m月%-d日" }}</span>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          {%- if post.tags.size > 0 -%}
+          <div class="post-tags">
+            {%- for tag in post.tags -%}
+              <span class="post-tag">#{{ tag }}</span>
+            {%- endfor -%}
+          </div>
+          {%- endif -%}
+        </div>
+        {%- if site.show_excerpts -%}
+          <div class="post-excerpt">
+            {{ post.excerpt }}
+          </div>
+        {%- endif -%}
+        <a class="read-more" href="{{ post.url | relative_url }}">閱讀更多 &rarr;</a>
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+</div>

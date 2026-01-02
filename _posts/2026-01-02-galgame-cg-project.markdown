@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "專案介紹：Galgame CG - 隨機 Galgame CG API"
+title:  "Galgame CG - 隨機 Galgame CG API"
 date:   2026-01-02 12:00:00 +0800
-categories: project
+categories: 項目
 tags: [galgame, api, nextjs]
 ---
 

@@ -1,0 +1,25 @@
+@use "minima/variables" as *;
+
+.category-section {
+  margin-bottom: $spacing-unit * 2;
+}
+
+.category-title {
+  @include relative-font-size(2);
+  margin-bottom: $spacing-unit;
+  padding-bottom: $spacing-unit * 0.5;
+  border-bottom: 2px solid $grey-color-light;
+  
+  .category-count {
+    font-size: 0.6em;
+    color: $grey-color;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+}
+
+[data-theme="dark"] {
+  .category-title {
+    border-bottom-color: var(--border-color);
+  }
+}
