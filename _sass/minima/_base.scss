@@ -16,6 +16,11 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
@@ -30,6 +35,8 @@ body {
   min-height: 100vh;
   flex-direction: column;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 
