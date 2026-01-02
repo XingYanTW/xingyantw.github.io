@@ -1,0 +1,54 @@
+---
+layout: post
+title:  "Core 開發日誌 #1 - 專案初始化"
+date:   2026-01-02 20:00:00 +0800
+categories: [項目, 開發日誌]
+tags: [minecraft, plugin, java, core, rpg]
+---
+
+[Core](https://github.com/XingYanTW/Core) 是一個客製化的 Minecraft 伺服器插件，旨在透過各種 RPG 風格的功能來增強遊戲體驗。它作為管理自訂內容、玩家數據和遊戲機制的的核心系統。
+
+> **注意：** 本專案目前處於早期且大量開發階段。
+
+## 🌟 功能概覽
+
+### 自訂生物
+實作了一套系統，用於建立和管理具有獨特屬性和行為的自訂生物。
+![Image]({{ site.baseurl }}/assets/images/CoreProject/螢幕擷取畫面 2026-01-02 214307.png)
+
+### 自訂物品
+包含自訂物品和武器的框架，允許建立具有特殊屬性和稀有度的裝備。
+![Image]({{ site.baseurl }}/assets/images/CoreProject/螢幕擷取畫面 2026-01-02 214404.png)
+
+### GUI 系統
+提供基於物品欄的 GUI 系統，以促進使用者與各種插件功能的互動，例如選單和數據顯示。
+![Image]({{ site.baseurl }}/assets/images/CoreProject/螢幕擷取畫面 2026-01-02 214415.png)
+
+### 玩家數據
+追蹤並管理自訂玩家數據，包括生命值、魔力、耐力和經驗值，這些數據獨立於原版 Minecraft 機制。
+![Image]({{ site.baseurl }}/assets/images/CoreProject/螢幕擷取畫面 2026-01-02 214657.png)
+
+### 獨特的攻擊系統
+本插件引入了全新的攻擊判定機制，不再受限於原版 Minecraft 的攻擊距離。
+*   **攻擊距離延伸**: 根據手持武器的屬性，可以動態增加攻擊距離，讓長柄武器或特殊裝備擁有更遠的打擊範圍。
+*   **AOE 範圍攻擊**: 支援將普通攻擊轉化為範圍傷害 (AOE)，能夠同時對攻擊路徑或目標周圍的多個敵人造成傷害。
+
+<video controls width="600">
+    <source src="{{ site.baseurl }}/assets/videos/Base Profile 2026.01.02 - 21.48.45.01.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+### 資源包整合 (W.I.P)
+包含資源包結構，以支援插件功能所需的自訂材質和字型。
+
+## 📂 專案結構
+
+*   `src/main/java`: 包含插件的 Java 原始碼。
+*   `src/main/resources`: 包含設定檔和插件描述檔。
+*   `ResourcePack`: 包含伺服器資源包的資產。
+
+## 🔨 建置方式
+
+本專案使用 Maven 建置。若要建置插件，請執行標準的 Maven package 指令。輸出的 jar 檔將位於 `target` 目錄中。
+
+

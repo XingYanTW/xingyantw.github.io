@@ -6,12 +6,12 @@ categories: cg集
 tags: ["galgame", "GameCG"]
 ---
 
-![Image]({{ site.baseurl }}/assets/images/suzuka.png)
+![Image]({{ site.baseurl }}/assets/images/suzuka/suzuka.png)
 
-![Image]({{ site.baseurl }}/assets/images/Magpie_004.png)
+![Image]({{ site.baseurl }}/assets/images/suzuka/Magpie_004.png)
 
-![Image]({{ site.baseurl }}/assets/images/Magpie_005.png)
+![Image]({{ site.baseurl }}/assets/images/suzuka/Magpie_005.png)
 
-![Image]({{ site.baseurl }}/assets/images/Magpie_006.png)
+![Image]({{ site.baseurl }}/assets/images/suzuka/Magpie_006.png)
 
-![Image]({{ site.baseurl }}/assets/images/Magpie_007.png)
+![Image]({{ site.baseurl }}/assets/images/suzuka/Magpie_007.png)
