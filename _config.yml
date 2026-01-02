@@ -22,7 +22,7 @@ title: 無用的發洩地
 email: xingyantw@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
   無用發洩地，記錄一些生活瑣事與技術筆記。
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://xingyantw.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: tw_xing
 github_username:  xingyantw
