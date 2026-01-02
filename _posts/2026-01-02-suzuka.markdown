@@ -2,7 +2,7 @@
 layout: post
 title: "涼花 - ラブピカルポッピー"
 date: 2026-01-02 19:50:00 +0800
-categories: CG集
+categories: cg集
 tags: ["galgame", "GameCG"]
 ---
 
