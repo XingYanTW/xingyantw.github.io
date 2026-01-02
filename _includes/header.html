@@ -3,7 +3,10 @@
   <div class="header-wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+      <img src="{{ '/favicon.ico' | relative_url }}" alt="Favicon" class="site-favicon">
+      {{ site.title | escape }}
+    </a>
 
     <div class="site-categories">
       {%- assign sorted_categories = site.categories | sort -%}

@@ -42,6 +42,16 @@
     margin-bottom: 0;
     float: left;
     transition: $transition;
+    display: flex;
+    align-items: center;
+    height: $spacing-unit * 1.865;
+
+    .site-favicon {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+        border-radius: 4px;
+    }
 
     &,
     &:visited {
