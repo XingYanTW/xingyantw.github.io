@@ -26,8 +26,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://xingyantw.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: tw_xing
 github_username:  xingyantw
-discord_username: sunaookami_shiroko
-discord_userid: "254856124820488192"   # 請在此填入您的 Discord User ID (例如: 123456789012345678)
 
 # Build settings
 # theme: minima

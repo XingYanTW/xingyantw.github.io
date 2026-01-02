@@ -14,6 +14,7 @@
   --header-bg: rgba(18, 18, 18, 0.95);
   --hero-overlay: rgba(18, 18, 18, 0.8);
   --shadow-color: rgba(0, 0, 0, 0.5);
+  --hover-bg: rgba(255, 255, 255, 0.1);
 
   body {
     background-color: var(--bg-color);
@@ -80,6 +81,12 @@
         background-color: rgba(255, 255, 255, 0.1);
       }
     }
+
+    label[for="nav-trigger"] {
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
     
     .menu-icon {
       > svg {
@@ -124,13 +131,11 @@
 
   // Button style
   .theme-toggle {
-    background: none;
-    border: none;
     color: var(--text-color);
-    padding: 5px;
     
     &:hover {
-      background-color: rgba(255,255,255,0.1);
+      background-color: var(--hover-bg);
+      border-radius: 50%;
     }
 
     .icon-sun {
@@ -169,10 +174,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease;
+  transition: background-color 0.2s ease;
   
   &:hover {
-    transform: rotate(15deg);
     background-color: rgba(0,0,0,0.05);
     border-radius: 50%;
   }
@@ -183,5 +187,9 @@
   
   .icon-moon {
     display: block;
+  }
+
+  .theme-toggle-text {
+    display: none;
   }
 }
