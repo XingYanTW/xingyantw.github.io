@@ -58,8 +58,14 @@
     }
   }
 
-  .site-title, .site-title:visited {
-    color: var(--text-color);
+  .site-title {
+        color: var(--text-color);
+    &:visited {
+        color: var(--text-color);
+      }
+      
+      &:hover {
+        color: var(--link-color);      }
   }
 
   .site-categories {
