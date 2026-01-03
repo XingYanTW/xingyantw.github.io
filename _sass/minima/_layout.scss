@@ -262,6 +262,7 @@
             display: block;
             margin-left: 0;
             padding: 12px 20px;
+            border-radius: 0px;
             border-bottom: 1px solid var(--border-color, $grey-color-light);
 
             &:not(:last-child) {
@@ -270,6 +271,7 @@
 
             &:hover {
                 background-color: rgba(0, 0, 0, 0.03);
+                border-radius: 0px;
             }
         }
 
@@ -423,10 +425,23 @@
 
 .footer-bottom {
     border-top: 1px solid var(--border-color, $grey-color-light);
-    padding-top: $spacing-unit * 0.25;
-    text-align: center;
+    padding-top: $spacing-unit * 0.5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
     @include relative-font-size(0.875);
     color: var(--text-color-secondary, $grey-color);
+
+    p {
+        margin: 0;
+    }
+
+    @include media-query($on-palm) {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 
@@ -435,7 +450,7 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+    padding: $spacing-unit * 0.5 0;
     flex: 1;
 }
 
@@ -491,7 +506,7 @@
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: $spacing-unit * 1.5;
+    gap: $spacing-unit;
     align-items: stretch; // Ensure items stretch to fill the row height
 
     >li {

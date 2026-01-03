@@ -13,6 +13,7 @@
       {%- for category in sorted_categories -%}
         <a class="page-link" href="{{ '/category/' | append: category[0] | relative_url }}">{{ category[0] | capitalize }}</a>
       {%- endfor -%}
+
     </div>
 
     {%- if page_paths -%}
