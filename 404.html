@@ -1,86 +1,151 @@
 ---
 permalink: /404.html
-layout: page
+layout: default
+title: 404 - Page Not Found
 ---
 
-<div class="not-found-page">
-    <div class="not-found-content">
-        <h1>你好像來錯地方了，這裡沒有你要的東西！</h1>
-        
-        <div class="spacer-1"></div>
-        
-        <button onclick="window.history.back()" class="back-button">回去</button>
-        
-        <div class="spacer-2"></div>
-        
-        <div class="image-container">
-            <img src="https://galgame-cg.vercel.app/api/random-image" alt="404" />
-        </div>
+<div class="not-found-container">
+  <div class="content-wrapper">
+    <h1 class="error-code">404</h1>
+    <h2 class="error-message">你好像來錯地方了，這裡沒有你要的東西！</h2>
+    
+    <div class="action-buttons">
+      <a href="{{ "/" | relative_url }}" class="btn btn-primary">回首頁</a>
+      <button onclick="window.history.back()" class="btn btn-secondary">上一頁</button>
     </div>
+  </div>
+
+  <div class="image-wrapper">
+    <img src="https://galgame-cg.vercel.app/api/random-image" alt="Random Anime Image" />
+  </div>
 </div>
 
 <style>
-    .not-found-page {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px 0;
-    }
+  .not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    gap: 3rem;
+    text-align: center;
+  }
 
-    .not-found-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
+  .error-code {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+    color: var(--brand-color, #3498db);
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.05);
+  }
 
-    .not-found-content h1 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        font-weight: bold;
-    }
+  .error-message {
+    font-size: 1.5rem;
+    margin: 1rem 0 2rem;
+    color: var(--text-color, #2c3e50);
+    font-weight: 500;
+  }
 
-    .spacer-1 { height: 20px; }
-    .spacer-2 { height: 40px; }
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-    .back-button {
-        background-color: #000;
-        color: white;
-        border: 1px solid #000;
-        padding: 0 1.5rem;
-        height: 2.5rem;
-        line-height: 2.3rem;
-        font-size: 0.9rem;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        font-family: inherit;
-    }
+  .btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .back-button:hover {
-        background-color: white;
-        color: #000;
-    }
+  .btn-primary,
+  .btn-primary:visited {
+    background-color: var(--brand-color, #3498db);
+    color: white;
+    border: 2px solid var(--brand-color, #3498db);
+  }
 
-    .image-container {
-        margin-top: 20px;
-    }
+  .btn-primary:hover,
+  .btn-primary:active {
+    background-color: transparent;
+    color: var(--brand-color, #3498db);
+    text-decoration: none;
+  }
 
-    .image-container img {
-        width: 500px;
-        max-width: 100%;
-        height: auto;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease-in-out;
-        background-color: white;
-    }
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--text-color, #2c3e50);
+    border: 2px solid var(--border-color, #e1e4e8);
+  }
 
-    .image-container img:hover {
-        transform: scale(1.02);
+  .btn-secondary:hover {
+    border-color: var(--text-color, #2c3e50);
+    background-color: var(--text-color, #2c3e50);
+    color: var(--bg-color, white);
+  }
+
+  .image-wrapper {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15);
+    background-color: var(--card-bg, #f8f9fa);
+    line-height: 0;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .image-wrapper:hover img {
+    transform: scale(1.03);
+  }
+
+  @media (max-width: 600px) {
+    .error-code {
+      font-size: 4rem;
     }
-</style>
+    .error-message {
+      font-size: 1.2rem;
+    }
+    .not-found-container {
+      padding: 2rem 1rem;
+    }
+  }
+
+  /* Dark mode adjustments */
+  [data-theme="dark"] .btn-secondary {
+    border-color: #e0e0e0;
+    color: #e0e0e0;
+  }
+
+  [data-theme="dark"] .btn-secondary:hover {
+    background-color: #e0e0e0;
+    color: #121212;
+  }
+  
+  [data-theme="dark"] .error-code {
+    text-shadow: 4px 4px 0px rgba(255,255,255,0.05);
+  }
+
+  [data-theme="dark"] .error-message {
+    color: #e0e0e0;
+  }
+
+  [data-theme="dark"] .btn-primary,
+  [data-theme="dark"] .btn-primary:visited {
+    color: white;
+  }
