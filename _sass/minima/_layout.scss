@@ -612,10 +612,12 @@
     padding: 2px 8px;
     border-radius: 4px;
     transition: all 0.2s ease;
+    text-decoration: none;
 
     &:hover {
         background-color: var(--link-color, $brand-color);
         color: #fff;
+        text-decoration: none;
     }
 }
 
@@ -658,17 +660,17 @@
 
         >li {
             padding: $spacing-unit * 0.8;
+            height: 180px; // Fixed height for category list items
+            min-height: unset;
 
             @supports (display: grid) {
                 margin-bottom: 0;
             }
 
             .post-card-header {
-                display: flex;
-                flex-direction: row-reverse;
-                justify-content: space-between;
-                align-items: center;
+                display: block;
                 margin-bottom: $spacing-unit * 0.25;
+                padding-right: 120px; // Reserve space for date
 
                 h3 {
                     margin: 0;
@@ -677,9 +679,11 @@
                 }
 
                 .post-meta {
-                    min-width: fit-content;
-                    margin-left: $spacing-unit;
-                    font-size: 0.9rem;
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    margin: 0;
+                    font-size: 0.85rem;
                 }
             }
 

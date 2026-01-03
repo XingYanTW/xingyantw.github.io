@@ -1,0 +1,111 @@
+---
+layout: page
+title: 標籤
+permalink: /tags/
+---
+
+<div class="tags-page">
+  <div class="tags-cloud">
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags %}
+      <a href="#{{ tag[0] | slugify }}" class="tag-cloud-item">#{{ tag[0] }} <span class="count">{{ tag[1].size }}</span></a>
+    {% endfor %}
+  </div>
+
+  <div class="tags-list">
+    {% for tag in tags %}
+      <div id="{{ tag[0] | slugify }}" class="tag-section">
+        <h2 class="tag-heading">{{ tag[0] }}</h2>
+        <ul class="post-list">
+          {% for post in tag[1] %}
+            <li class="post-card">
+              <div class="post-card-header">
+                <span class="post-meta">{{ post.date | date: "%Y年%-m月%-d日" }}</span>
+                <h3>
+                  <a class="post-link" href="{{ post.url | relative_url }}">
+                    {{ post.title | escape }}
+                  </a>
+                </h3>
+              </div>
+              {%- if post.tags.size > 0 -%}
+              <div class="post-tags">
+                {%- for t in post.tags -%}
+                  <a href="{{ '/tags/' | relative_url }}#{{ t | slugify }}" class="post-tag">#{{ t }}</a>
+                {%- endfor -%}
+              </div>
+              {%- endif -%}
+              {% if post.excerpt %}
+                <div class="post-excerpt">
+                  {{ post.excerpt | strip_html | truncatewords: 10 }}
+                </div>
+              {% endif %}
+              <a class="read-more" href="{{ post.url | relative_url }}">閱讀更多 &rarr;</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .tags-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 3rem;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+  
+  .tag-cloud-item {
+    padding: 8px 16px;
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border-color, #eee);
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--text-color, #333);
+    font-weight: 500;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .tag-cloud-item:hover {
+    border-color: var(--brand-color, #3498db);
+    color: var(--brand-color, #3498db);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-decoration: none;
+  }
+  
+  .tag-cloud-item .count {
+    background: rgba(0,0,0,0.05);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8em;
+  }
+  
+  .tag-section {
+    margin-bottom: 4rem;
+    scroll-margin-top: 120px; /* For sticky header */
+  }
+  
+  .tag-heading {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color, #eee);
+    color: var(--brand-color, #3498db);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .tag-heading::before {
+    content: "#";
+    color: var(--text-color-secondary, #ccc);
+    font-weight: 300;
+  }
+</style>
