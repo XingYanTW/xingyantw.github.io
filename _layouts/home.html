@@ -14,7 +14,7 @@ layout: default
     <h2 class="post-list-heading">{{ page.list_title | default: "Latest Posts" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts limit:2 -%}
-      <li class="post-card">
+      <li class="post-card" style="--animation-order: {{ forloop.index0 }};">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <div class="post-card-header">
           <span class="post-meta">{{ post.date | date: "%Y年%-m月%-d日" }}</span>

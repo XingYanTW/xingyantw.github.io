@@ -8,7 +8,7 @@ pagination:
 
   <ul class="post-list">
     {% for post in paginator.posts %}
-      <li class="post-card">
+      <li class="post-card" style="--animation-order: {{ forloop.index0 }};">
         <div class="post-card-header">
           <span class="post-meta">{{ post.date | date: "%Y年%-m月%-d日" }}</span>
           <h3>
