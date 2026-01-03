@@ -36,6 +36,7 @@ plugins:
   - jekyll-archives
   - jekyll-paginate-v2
   - jekyll-sitemap
+  - jekyll-analytics
 
 # jekyll-archives:
 #   enabled:
@@ -68,6 +69,11 @@ autopages:
     enabled: false
   collections:
     enabled: false
+
+jekyll_analytics:
+  provider: google
+  google:
+    tracking_id: G-V8X9PEYVV0
 
 # Exclude from processing.
 # The following items will not be processed, by default.
