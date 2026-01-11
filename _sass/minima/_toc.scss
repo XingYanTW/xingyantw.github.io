@@ -1,0 +1,87 @@
+@use "minima/variables" as *;
+
+$toc-breakpoint: 1350px;
+$sidebar-width: 200px;
+$sidebar-gap: 30px;
+
+// Ensure variables are defined if not picked up from global
+$content-width: 860px !default;
+
+.post-layout {
+    position: relative;
+    // No longer need overflow tweaks here if sidebar is fixed outside the flow practically
+}
+
+.post-sidebar {
+    display: none;
+    width: $sidebar-width;
+    position: fixed; // Fixed relative to viewport
+
+    // Calculate left position: Center of screen (50%) minus half content width minus sidebar width minus gap
+    left: calc(50% - (#{$content-width} / 2) - #{$sidebar-width} - #{$sidebar-gap});
+
+    top: 120px; // Fixed top position
+    bottom: 40px;
+    z-index: 10;
+
+    @media screen and (min-width: $toc-breakpoint) {
+        display: block;
+    }
+
+    .toc-container {
+        // No longer need sticky here since the parent is fixed
+        max-height: 100%;
+        overflow-y: auto;
+        padding-right: 10px;
+
+        /* Scrollbar styling */
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+    }
+}
+
+.toc {
+    font-size: 0.9rem;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        ul {
+            padding-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+
+    li {
+        margin-bottom: 8px;
+        line-height: 1.4;
+
+        a {
+            text-decoration: none;
+            color: var(--text-color-secondary, #828282);
+            transition: all 0.2s ease;
+            display: block;
+            border-left: 2px solid transparent;
+            padding-left: 12px;
+
+            &:hover {
+                color: var(--link-color, #2a7ae2);
+            }
+
+            &.active {
+                color: var(--link-color, #2a7ae2);
+                border-left-color: var(--link-color, #2a7ae2);
+                font-weight: 600;
+            }
+        }
+    }
+}
