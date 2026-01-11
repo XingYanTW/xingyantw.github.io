@@ -1,0 +1,52 @@
+---
+layout: post
+title:  "Core 開發日誌 #2 - 職業系統與技能實裝"
+date:   2026-01-12 01:57:00 +0800
+categories: [項目, 開發日誌]
+tags: [minecraft, plugin, java, core, rpg]
+---
+
+本次更新正式引入了 Core 的核心玩法——**職業系統 (Class System)**。我們實作了多種職業、獨特的技能效果以及基於滑鼠連擊的觸發機制，讓戰鬥體驗更加豐富多變。
+
+## ⚔️ 職業系統與技能機制
+
+現在玩家可以選擇不同的職業，每個職業都擁有獨特的技能組與戰鬥風格。
+
+### 支援職業
+目前已實裝以下七種基礎職業：
+*   **Berserker (狂戰士)**: 專精於近戰爆發與生存。
+*   **BladeMaster (劍聖)**: 擁有高機動性與劍術連擊。
+*   **Elementalist (元素使)**: 操控元素進行範圍攻擊。
+*   **ShadowAssassin (暗影刺客)**: 擅長隱身與背刺爆發。
+*   **SoulReaper (靈魂收割者)**: 收割靈魂以強化自身。
+*   **WindRanger (風行者)**: 靈活的遠程弓箭手。
+*   **Arbalestier (強弩手)**: 重型遠程火力輸出。
+
+### 技能連擊系統 (Combo System)
+為了讓操作更具技巧性，我們捨棄了單調的按鍵施法，採用了 **滑鼠連擊 (Mouse Combo)** 系統。玩家需要按照特定順序點擊滑鼠（例如：`右鍵 -> 左鍵 -> 右鍵`）來觸發技能。
+
+*   **判定優化**: 修復了連擊判定的邏輯，確保在戰鬥中能流暢地接招。
+*   **技能特效**: 為所有技能加入了視覺特效，提供直觀的打擊回饋。
+
+<video controls width="600">
+    <source src="{{ site.baseurl }}/assets/videos/CoreCombo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+## 🖥️ 全新職業介面 (Class GUI)
+
+配合職業系統的上線，我們新增了專屬的職業選擇與查看介面。
+
+*   **GUI 實裝**: 新增了 `/class` 指令開啟的介面，佈局直觀且易於操作。
+*   **資訊展示**: 新的 `ClassInfoGUI` 能清晰顯示各職業的屬性數據與技能說明。
+
+![Class GUI Screenshot]({{ site.baseurl }}/assets/images/CoreProject/CoreClassGui.png)![Class Info GUI Screenshot]({{ site.baseurl }}/assets/images/CoreProject/ClassInfoGUI.png)
+
+## ⚙️ 核心優化
+
+*   **資料庫管理**: 更新 `DatabaseManager.java`，優化玩家數據存取。
+*   **事件監聽**: 優化 `Attack.java` 與 `SkillTriggerListener.java`，提升戰鬥計算效能。
+
+---
+
+> **開發者筆記**：這次更新確立了遊戲的職業基礎。接下來我們將繼續調整各職業的數值平衡，並豐富技能的具體效果。

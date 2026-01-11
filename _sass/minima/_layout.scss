@@ -181,7 +181,7 @@
             backdrop-filter: blur(2px);
         }
 
-        input:checked ~ .nav-overlay {
+        input:checked~.nav-overlay {
             opacity: 1;
             visibility: visible;
         }
@@ -239,7 +239,7 @@
         }
 
         @at-root html:has(#nav-trigger:checked),
-                 body:has(#nav-trigger:checked) {
+        body:has(#nav-trigger:checked) {
             overflow: hidden;
             overscroll-behavior: none;
         }
@@ -491,6 +491,7 @@
         margin-bottom: $spacing-unit * 0.5;
         background: linear-gradient(120deg, $brand-color, color.adjust($brand-color, $lightness: 20%));
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
@@ -524,7 +525,7 @@
         min-height: 280px;
         position: relative;
         overflow: hidden;
-        
+
         // Animation
         opacity: 0;
         animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -556,6 +557,7 @@
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
