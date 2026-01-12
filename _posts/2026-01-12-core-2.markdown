@@ -41,8 +41,7 @@ tags: [minecraft, plugin, java, core, rpg]
 *   **GUI 實裝**: 新增了 `/class` 指令開啟的介面，佈局直觀且易於操作。
 *   **資訊展示**: 新的 `ClassInfoGUI` 能清晰顯示各職業的屬性數據與技能說明。
 
-![Class GUI Screenshot]({{ site.baseurl }}/assets/images/CoreProject/CoreClassGUI.png)
-![Class Info GUI Screenshot]({{ site.baseurl }}/assets/images/CoreProject/ClassInfoGUI.png)
+![Class GUI Screenshot]({{ site.baseurl }}/assets/images/CoreProject/CoreClassGui.png)![Class Info GUI Screenshot]({{ site.baseurl }}/assets/images/CoreProject/ClassInfoGUI.png)
 
 ## ⚙️ 核心優化
 
