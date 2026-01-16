@@ -6,13 +6,13 @@ categories: 項目
 tags: [galgame, api, nextjs]
 ---
 
-這個專案是我為了朋友間用的OpenList所開發的：[Galgame-CG](https://github.com/XingYanTW/Galgame-CG)。
+這個專案是我為了朋友間用的OpenList所開發的：[Galgame-CG](https://github.com/xydesu/Galgame-CG)。
 
 這是一個簡單的 API 服務，主要功能是提供隨機的 Galgame CG 圖片。如果你需要在網站或個人專案中展示隨機的動漫風格背景或圖片，這個專案或許能派上用場。
 
 ## 專案連結
 
-- **GitHub Repository**: [https://github.com/XingYanTW/Galgame-CG](https://github.com/XingYanTW/Galgame-CG)
+- **GitHub Repository**: [https://github.com/xydesu/Galgame-CG](https://github.com/xydesu/Galgame-CG)
 - **Live Demo**: [https://galgame-cg.vercel.app/](https://galgame-cg.vercel.app/)
 
 ## 使用方式
@@ -47,7 +47,7 @@ tags: [galgame, api, nextjs]
 
 1.  Clone 專案：
     ```bash
-    git clone https://github.com/XingYanTW/Galgame-CG.git
+    git clone https://github.com/xydesu/Galgame-CG.git
     cd Galgame-CG
     ```
 2.  安裝依賴：
@@ -67,7 +67,7 @@ tags: [galgame, api, nextjs]
 2.  將圖片檔案放入 `public/images` 資料夾。
 3.  提交 **Pull Request**。
 
-或者，你也可以透過 [Issue](https://github.com/XingYanTW/Galgame-CG/issues/new) 頁面提交建議。
+或者，你也可以透過 [Issue](https://github.com/xydesu/Galgame-CG/issues/new) 頁面提交建議。
 
 ---
 

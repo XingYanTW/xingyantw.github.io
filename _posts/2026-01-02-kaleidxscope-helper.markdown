@@ -23,9 +23,9 @@ KALEIDXSCOPE (KALEID×SCOPE) 是 **maimai でらっくす PRiSM** 版本中新�
 
 **KALEIDXSCOPE Helper** 是一個書籤小工具 (Bookmarklet)，可以直接在瀏覽器中執行。它會在 maimai DX 的「收藏歌曲」頁面上顯示一個控制面板，讓你能夠快速篩選並勾選特定 Gate 的歌曲。
 
-*   **GitHub 儲存庫**: [XingYanTW/KALEIDXSCOPE-Helper](https://github.com/XingYanTW/KALEIDXSCOPE-Helper)
+*   **GitHub 儲存庫**: [xydesu/KALEIDXSCOPE-Helper](https://github.com/xydesu/KALEIDXSCOPE-Helper)
 
-![UI 預覽](https://raw.githubusercontent.com/XingYanTW/KALEIDXSCOPE-Helper/refs/heads/main/docs/UI_ZH_TW.png)
+![UI 預覽](https://raw.githubusercontent.com/xydesu/KALEIDXSCOPE-Helper/refs/heads/main/docs/UI_ZH_TW.png)
 
 ## 主要功能
 
@@ -42,7 +42,7 @@ KALEIDXSCOPE (KALEID×SCOPE) 是 **maimai でらっくす PRiSM** 版本中新�
 3.  在網址（URL）欄位中，貼上以下代碼：
 
 ```javascript
-javascript:(function(){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/XingYanTW/KALEIDXSCOPE-Helper@latest/main.js';s.crossOrigin='anonymous';document.body.appendChild(s);})();
+javascript:(function(){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/xydesu/KALEIDXSCOPE-Helper@latest/main.js';s.crossOrigin='anonymous';document.body.appendChild(s);})();
 ```
 
 ## 使用教學
