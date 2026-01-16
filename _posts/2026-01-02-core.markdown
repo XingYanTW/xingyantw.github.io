@@ -6,7 +6,7 @@ categories: [項目, 開發日誌]
 tags: [minecraft, plugin, java, core, rpg]
 ---
 
-[Core](https://github.com/XingYanTW/Core) 是一個客製化的 Minecraft 伺服器插件，旨在透過各種 RPG 風格的功能來增強遊戲體驗。它作為管理自訂內容、玩家數據和遊戲機制的的核心系統。
+[Core](https://github.com/xydesu/Core) 是一個客製化的 Minecraft 伺服器插件，旨在透過各種 RPG 風格的功能來增強遊戲體驗。它作為管理自訂內容、玩家數據和遊戲機制的的核心系統。
 
 > **注意：** 本專案目前處於早期且大量開發階段。
 
