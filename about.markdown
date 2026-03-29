@@ -85,6 +85,15 @@ permalink: /about/
       <span>JavaScript</span>
     </div>
   </a>
+
+  <a href="https://github.com/xydesu/endfield-assistant" class="project-card" style="--animation-order: 7;">
+    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem;">Endfield Assistant</h4>
+    <p style="font-size: 0.9rem; margin: 0 0 0.5rem 0; color: var(--text-color-light, #666);">明日方舟：終末地每日簽到自動化 Discord 機器人，支援排程簽到、玩家資料與體力通知。</p>
+    <div style="display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: #666; margin-top: auto;">
+      <img src="https://skillicons.dev/icons?i=js" height="16" alt="JavaScript" />
+      <span>JavaScript</span>
+    </div>
+  </a>
 </div>
 
 <style>
