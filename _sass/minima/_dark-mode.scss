@@ -125,7 +125,16 @@
   }
 
   table {
-    th, td {
+    color: var(--text-color);
+    border-color: var(--border-color);
+    tbody tr:nth-child(even) {
+      background-color: var(--bg-color-secondary);
+    }
+    th {
+      background-color: var(--card-bg);
+      border-color: var(--border-color);
+    }
+    td {
       border-color: var(--border-color);
     }
   }
