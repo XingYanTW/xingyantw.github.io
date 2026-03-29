@@ -1,7 +1,9 @@
 ---
-layout: page
-title: "Endfield Assistant"
-permalink: /endfield-assistant/
+layout: pposte
+title: "Discord機器人：終末地簽到小助手"
+date:   2026-03-30 00:00:00 +0800
+categories: [項目, 開發日誌]
+tags: [discord, endfield, bot]
 ---
 
 <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem;">
